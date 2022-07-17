@@ -1,0 +1,13 @@
+@import 'variables';
+
+.service__card{
+    @include flexdiv(row, space-between, center);
+    border-bottom: dashed $darkText 2px;
+    padding: 2rem 0;
+    font-size: 1.4rem;    
+    color: $silverText;
+
+    &--price{
+        color: $primary;
+    }
+}

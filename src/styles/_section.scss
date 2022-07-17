@@ -1,0 +1,39 @@
+@import 'variables';
+
+.section{
+    height: 100vh;
+    padding: 8rem 0;
+    
+    &--wrapper{
+        height: inherit;
+        .section__text{
+            text-align: center;
+            &--image{
+                width: 5rem;
+                color: $primary;
+            }
+    
+            &--title{
+                font-size: clamp(4rem, 3vw, 7rem);
+                color: $darkText;
+                margin: 2rem 0;
+            }
+    
+            &--paragraph{
+                line-height: 3rem;
+                text-align: center;
+                font-size: clamp(1.4rem, 2vw, 1.75rem);
+                margin: 1.25rem;
+                .contact--link{
+                    color: $primary;
+                }
+            }
+        }
+
+        .section__image{
+            margin-top: 8rem;
+        }
+
+    }
+    
+}

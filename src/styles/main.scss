@@ -1,0 +1,18 @@
+@import 'resets.scss';
+@import 'variables.scss';
+@import 'config.scss';
+@import 'hero';
+@import 'genStyles';
+@import 'responsive';
+@import 'section';
+@import 'menu';
+@import 'footer';
+@import 'serviceCard';
+@import 'service';
+@import 'location';
+@import 'photoGallery';
+
+
+#map{
+    height: 35rem;
+}

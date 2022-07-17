@@ -1,0 +1,25 @@
+.photo__gallery{
+    &--title{
+        text-align: center;
+        font-size: clamp(4rem, 3vw, 7rem);
+        color: $darkText;
+        margin-bottom: 4rem;
+    }
+
+    &--wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo__gallery--imageDiv{
+        overflow: hidden;
+    }
+
+    .photo__gallery--image{       
+        transition: all .5s ease-in-out;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    
+}

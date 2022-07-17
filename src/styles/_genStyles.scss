@@ -1,0 +1,48 @@
+.title{
+    font-family: 'Great Vibes', cursive;
+    text-transform: capitalize;
+}
+
+.paragraph{
+    font-family: 'Roboto', sans-serif;
+    color: $darkText;
+}
+
+.btn{
+    border: none;
+}
+
+.hero__book{
+    @include flexdiv(column, center, center, 2rem);
+}
+
+.btn--book{
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 1.25em 0;
+    text-transform: uppercase;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    background-color: $primary;
+    color: $lightText;
+    max-width: 30rem;
+    transition: all .5s ease;
+
+    &:hover{
+        transform: translateY(-7.5%);
+        background-color: $primaryAlt;
+    }
+    
+}
+
+
+
+// font-family: 'Great Vibes', cursive;
+
+// font-family: 'Kaushan Script', cursive;
+
+// font-family: 'Libre Franklin', sans-serif;
+
+// font-family: 'The Nautigal', cursive;
+
+// font-family: 'Roboto', sans-serif;

@@ -1,0 +1,18 @@
+$primary:#c99c59;
+$primaryAlt: #9e7f3c;
+$darkText:  #353535;
+$blackText: #000000;
+$lightText: #ffffff;
+$silverText: #C0C0C0;
+
+@mixin flexdiv ($direction:row, $justify:flex-start, $align:flex-start, $gap:0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}

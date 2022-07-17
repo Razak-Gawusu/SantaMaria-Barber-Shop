@@ -1,0 +1,50 @@
+.timeLocation{
+    text-align: center;
+     h1{
+        font-size: clamp(4rem, 3vw, 7rem);
+        color: $darkText;
+        margin-bottom: 4rem;
+     }
+
+     &--wrapper{
+        .timeLocation__item{ 
+             font-family: 'Roboto', sans-serif;
+             font-size: 1.5rem;
+             margin: 4rem 0;
+             &--info{
+                margin-bottom: 4rem;
+                h2{
+                    font-size: 3rem;
+                    padding: 1rem;
+                }
+                p{
+                    color: $darkText;
+                }
+
+                .btn--location{
+                    background-color: $primary;
+                    font-size: 2rem;
+                    padding: 1em 1.5em;
+                    width: 70%;
+                    color: $lightText;
+                    margin: 4rem 0;
+                }
+            }
+
+            .location__info{
+                @include flexdiv(row, center, center, 2rem);
+                 margin: 1.5rem 0;
+                 color: $darkText;
+
+                 &--icon{
+                    width: 2.5rem;
+                 }
+            }    
+        }
+    }
+}
+
+#map{
+    height: 20rem;
+    max-width: 100%;
+}

@@ -1,0 +1,129 @@
+@import 'config';
+
+@include media-sm{
+    .showcase{
+        .header{
+            &__top{
+                &--hamburger{
+                    display: block;
+                }
+    
+                .navbar{
+                    display: none;                  
+                    &__list{
+                        @include flexdiv(column);
+                    }
+                    &__close{
+                        display: block;
+                    }
+
+                }
+        
+            }
+        }
+        .services{
+            &--wrapper{
+                .service__card--wrapper{
+                    grid-template-columns: repeat(1, 1fr) !important;
+                }
+                
+            }
+        }
+
+    }
+
+}
+
+@include media-md{
+    .hero__book{
+        @include flexdiv(row, center, center, 2rem);   
+    }
+
+
+    @import 'variables';
+
+    .section{
+        height: 100vh;
+        padding: 0 !important;
+        
+        &--wrapper{
+            .section__image{
+                margin-top: 0 !important;
+            }
+
+        }
+        
+    }
+
+    .services{
+        .service__card--wrapper{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 5rem;
+            padding-bottom: 4rem;
+        }            
+    }
+    
+
+    .btn--book{
+        width: 30%;
+    }
+
+    .photo__gallery{
+        &--wrapper{
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
+    }
+
+
+
+}
+
+@include media-lg{
+    .section{
+        &--wrapper{
+            @include flexdiv(row, space-between, center, 5rem);
+            height: inherit;
+            .section__text{
+               width: 40%;
+            }
+    
+            .section__image{
+                width: 50%;
+            }
+        }
+    }
+
+    .timeLocation{
+         &--wrapper{
+
+            .timeLocation__item{
+                text-align: left !important;
+                @include flexdiv(row, space-between, flex-start);
+
+                &--info{
+                    width: 30%;
+                    .location__info{
+                        justify-content: flex-start !important;
+                    }
+                }
+
+                &--map{
+                    width: 65%;  
+                }
+            }
+
+            .timeLocation__item:nth-child(2n){
+                @include flexdiv(row-reverse, space-between)
+            }
+        }
+    }
+
+    .photo__gallery{
+        &--wrapper{
+            grid-template-columns: repeat(4, 1fr) !important;
+        }
+    }
+
+
+}
