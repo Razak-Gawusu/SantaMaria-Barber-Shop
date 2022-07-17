@@ -19,23 +19,12 @@ function Main() {
         setPhoto(photosData)
     }, [service, location, photo])
 
-    // const openNav = () => {
-    //     //const menu = document.querySelector('.header__top--hamburger')
-    //     const nav = document.querySelector('.navbar')
-    //     nav.style.display = 'block'
-    // }
-    // const closeNav = () => {
-    //     //const menu = document.querySelector('.header__top--hamburger')
-    //     const nav = document.querySelector('.navbar')
-    //     nav.style.display = 'none'
-    // }
-
   return (
     <>
         <div className='showcase'>
             <div className="header">
                 <div className='container header__top'>
-                    <h1>looksNstyle</h1>
+                    <h1>Santa Maria Barber</h1>
                     <FaBars className='header__top--hamburger'/>
                     <Navbar />
                 </div>
