@@ -1,0 +1,34 @@
+.header{
+    padding: 2rem 0;
+    @include flexdiv(row, space-between, center);
+
+    .logo{
+        img{
+            width: 6rem;
+        }
+    }
+
+    .nav{
+        .nav__list{
+            @include flexdiv(row, flex-start, center, 2rem);
+        }
+        .navlink{
+            text-decoration: none;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: $lightText;
+            font-family: 'Libre Franklin', sans-serif;
+            padding: 1rem 0;
+            border-bottom: solid .4rem transparent;
+
+            &:hover{
+                border-bottom: solid .4rem $lightText;
+            }
+        }
+    }
+
+    .hamburger--menu{
+        font-size: 2rem;
+        color: $lightText;
+    }
+}

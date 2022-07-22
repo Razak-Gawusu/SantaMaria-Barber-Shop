@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Service from '../components/Service'
 import {serviceData, locationInfo} from '../data'
@@ -7,6 +6,7 @@ import {FaBars, } from 'react-icons/fa'
 import Location from '../components/Location'
 import { photosData } from '../data'
 import Photos from '../components/Photos'
+import Home from './Home'
 
 function Main() {
     const [service, setService] = useState([])
@@ -21,29 +21,9 @@ function Main() {
 
   return (
     <>
-        <div className='showcase'>
-            <div className="header">
-                <div className='container header__top'>
-                    <h1>Santa Maria Barber</h1>
-                    <FaBars className='header__top--hamburger'/>
-                    <Navbar />
-                </div>
+        <Home />
 
-                <div className='hero container'>
-                    <div className='hero--wrapper'>
-                    <h1 className='title hero--title'>santa barber shop</h1>
-                <p className='hero--heading'>the most authentic barbershop experience in the santa-maria area</p>
-                <div className='hero__book'>
-                    <button className='btn btn--book'>book michael</button>
-                    <button className='btn btn--book'>book joseph</button>
-                </div>
-                    </div>
-                
-                </div>
-            </div>
-        </div>
-
-        <section className='section'>
+        <section className='section' id='aboutus'>
             <div className="section--wrapper container">
                 <article className='section__text'>
                     <img src="./images/razor.svg" alt="icon" className='section__text--image' />
@@ -59,7 +39,7 @@ function Main() {
             </div> 
         </section>
 
-        <section className='photo__gallery'>
+        <section className='photo__gallery' id='photos'>
             <h2 className='title photo__gallery--title'>photo gallery</h2>
             <div className='container photo__gallery--wrapper'>
                 {photo.map((photo) => (
@@ -71,7 +51,7 @@ function Main() {
             </div>
         </section>
 
-        <section className="services">
+        <section className="services" id='services'>
             <div className="services--wrapper">
                 <div className='service--top'>
                     <h2 className='title service__title'>what we offer</h2>
@@ -96,7 +76,7 @@ function Main() {
             </div>
         </section>
 
-        <section className='timeLocation'>
+        <section className='timeLocation' id='contact'>
             <h1 className='title'>Times & Location</h1>
             <div className="timeLocation--wrapper container">
                 {location.map((location) => (
@@ -116,7 +96,7 @@ function Main() {
             </div>
         </section>
 
-        <section className='section'>
+        <section className='section' id='career'>
             <div className="section--wrapper container">
                 <article className='section__text'>
                 <img src="./images/cutters.svg" alt="icon" className='section__text--image' />

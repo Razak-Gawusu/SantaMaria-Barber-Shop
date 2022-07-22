@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
   padding: 0;
 }
 
-ul {
+ul, li {
   list-style: none;
 }
 
@@ -28,89 +28,6 @@ img {
   width: 90%;
   max-width: 1200px;
   margin: auto;
-}
-
-.showcase {
-  position: relative;
-  height: 100vh;
-  background-color: #353535;
-  background-image: url("../../public/images/hero_img.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  isolation: isolate;
-}
-.showcase::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: -1;
-}
-.showcase .header {
-  padding: 2rem 0;
-  height: inherit;
-  color: #ffffff;
-}
-.showcase .header__top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-}
-.showcase .header__top--hamburger {
-  font-size: 2.5rem;
-  display: none;
-}
-.showcase .header__top--hamburger:hover {
-  color: #c99c59;
-}
-.showcase .header .navbar {
-  display: block;
-}
-.showcase .header .navbar__close {
-  display: none;
-  font-size: 2rem;
-  color: #ffffff;
-}
-.showcase .header .navbar__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-}
-.showcase .header .navbar__list .navbar__item {
-  font-size: 1.5rem;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  color: #C0C0C0;
-  border-bottom: transparent solid 4px;
-  padding: 1rem 0;
-}
-.showcase .header .navbar__list .navbar__item:hover {
-  color: #ffffff;
-  border-bottom: #c99c59 solid 4px;
-}
-.showcase .header .hero {
-  height: inherit;
-  display: grid;
-  place-items: center;
-  text-align: center;
-}
-.showcase .header .hero .hero--title {
-  font-size: clamp(6rem, 7vw, 13rem);
-}
-.showcase .header .hero .hero--heading {
-  font-family: "Libre Franklin", sans-serif;
-  font-size: clamp(1.4rem, 1.75vw, 1.8rem);
-  text-transform: uppercase;
-  font-weight: 400;
-  color: #C0C0C0;
-  letter-spacing: 0.17rem;
-  margin-bottom: 2rem;
 }
 
 .title {
@@ -145,7 +62,7 @@ img {
   background-color: #c99c59;
   color: #ffffff;
   max-width: 30rem;
-  transition: all 0.5s ease;
+  transition: all 0.25s ease;
 }
 .btn--book:hover {
   transform: translateY(-7.5%);
@@ -153,27 +70,57 @@ img {
 }
 
 @media screen and (max-width: 599px) {
-  .showcase .header__top--hamburger {
-    display: block;
-  }
-  .showcase .header__top .navbar {
+  .home .nav {
     display: none;
   }
-  .showcase .header__top .navbar__list {
+  .home .mobile--nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    background-color: #ffffff;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 0;
+    z-index: 1;
   }
-  .showcase .header__top .navbar__close {
-    display: block;
+  .home .mobile--nav .icon.close {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    font-size: 2rem;
+    cursor: pointer;
   }
-  .showcase .services--wrapper .service__card--wrapper {
-    grid-template-columns: repeat(1, 1fr) !important;
+  .home .mobile--nav .nav__list {
+    display: flex;
+    flex-direction: column !important;
+    gap: 4rem !important;
+  }
+  .home .mobile--nav .nav__list .navlink {
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: "Libre Franklin", sans-serif;
+    padding: 1rem 0;
+    border-bottom: solid 0.4rem transparent;
+    color: #353535;
+  }
+  .home .mobile--nav .nav__list .navlink:hover {
+    border-bottom: solid #353535 0.4rem;
   }
 }
 @media screen and (min-width: 650px) {
+  .home .hamburger--menu {
+    display: none;
+  }
+  .home .mobile--nav {
+    display: none;
+  }
   .hero__book {
     display: flex;
     flex-direction: row;
@@ -474,6 +421,79 @@ img {
 }
 .photo__gallery .photo__gallery--image:hover {
   transform: scale(1.1);
+}
+
+.home {
+  min-height: 100vh;
+  background-color: #353535;
+  background-image: url("../../public/images/hero_img.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.header {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.header .logo img {
+  width: 6rem;
+}
+.header .nav .nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.header .nav .navlink {
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Libre Franklin", sans-serif;
+  padding: 1rem 0;
+  border-bottom: solid 0.4rem transparent;
+}
+.header .nav .navlink:hover {
+  border-bottom: solid 0.4rem #ffffff;
+}
+.header .hamburger--menu {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.hero {
+  width: 100%;
+  text-align: center;
+  transform: translateY(50%);
+}
+.hero .hero--title {
+  font-size: clamp(6rem, 7vw, 13rem);
+  color: #ffffff;
+  padding: 2rem 0;
+}
+.hero .hero--heading {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: clamp(1.4rem, 1.75vw, 1.8rem);
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #C0C0C0;
+  letter-spacing: 0.17rem;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
 }
 
 #map {

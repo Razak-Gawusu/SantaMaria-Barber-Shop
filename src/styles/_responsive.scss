@@ -1,46 +1,66 @@
 @import 'config';
 
 @include media-sm{
-    .showcase{
-        .header{
-            &__top{
-                &--hamburger{
-                    display: block;
-                }
-    
-                .navbar{
-                    display: none;                  
-                    &__list{
-                        @include flexdiv(column);
-                    }
-                    &__close{
-                        display: block;
-                    }
-
-                }
-        
-            }
+    .home{
+        .nav{
+            display: none;
         }
-        .services{
-            &--wrapper{
-                .service__card--wrapper{
-                    grid-template-columns: repeat(1, 1fr) !important;
-                }
-                
-            }
-        }
+        .mobile--nav{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            overflow: hidden;
+            transition: all .4s ease-in-out;
+            background-color: $lightText;
+            @include flexdiv(row, center, center);
+            z-index: 1;
 
+            .icon.close{
+                position: absolute;
+                top: 2.5rem;
+                left: 2.5rem;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+
+            .nav__list{
+                display: flex;
+                flex-direction: column !important;
+                gap: 4rem !important;
+
+                .navlink{
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    font-family: 'Libre Franklin', sans-serif;
+                    padding: 1rem 0;
+                    border-bottom: solid .4rem transparent;
+                    color: $darkText;
+
+                    &:hover{
+                        border-bottom: solid $darkText .4rem;
+                    }
+                }
+            }  
+        }
     }
-
 }
 
 @include media-md{
+    .home{
+        .hamburger--menu{
+            display: none
+        }
+
+        .mobile--nav{
+            display: none
+        }
+    }
     .hero__book{
         @include flexdiv(row, center, center, 2rem);   
     }
-
-
-    @import 'variables';
 
     .section{
         height: 100vh;
