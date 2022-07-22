@@ -1,7 +1,7 @@
 @import 'variables';
 
 .section{
-    height: 100vh;
+    min-height: 100vh;
     padding: 8rem 0;
     
     &--wrapper{
