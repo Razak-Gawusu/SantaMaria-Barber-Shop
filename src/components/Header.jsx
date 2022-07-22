@@ -1,5 +1,4 @@
 import React, {useRef} from 'react'
-import Navbar from './Navbar'
 import {FaBars, FaTimes} from 'react-icons/fa'
 
 function Header() {

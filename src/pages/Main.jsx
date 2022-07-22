@@ -1,24 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import Footer from '../components/Footer'
 import Service from '../components/Service'
 import {serviceData, locationInfo} from '../data'
-import {FaBars, } from 'react-icons/fa'
 import Location from '../components/Location'
 import { photosData } from '../data'
 import Photos from '../components/Photos'
 import Home from './Home'
 
 function Main() {
-    const [service, setService] = useState([])
-    const [location, setLocation] = useState([])
-    const [photo, setPhoto] = useState([])
-
-    useEffect(() => {
-        setService(serviceData)
-        setLocation(locationInfo)
-        setPhoto(photosData)
-    }, [service, location, photo])
-
   return (
     <>
         <Home />
@@ -42,7 +31,7 @@ function Main() {
         <section className='photo__gallery' id='photos'>
             <h2 className='title photo__gallery--title'>photo gallery</h2>
             <div className='container photo__gallery--wrapper'>
-                {photo.map((photo) => (
+                {photosData.map((photo) => (
                     <Photos 
                     key={photo.id}
                     img={photo.img}
@@ -59,7 +48,7 @@ function Main() {
                 <div className="container">
                     <div className='service__item'>
                         <article className='service__card--wrapper'>
-                            {service.map((service) => (
+                            {serviceData.map((service) => (
                                 <Service 
                                 name={service.name}
                                 price={service.price}
@@ -79,7 +68,7 @@ function Main() {
         <section className='timeLocation' id='contact'>
             <h1 className='title'>Times & Location</h1>
             <div className="timeLocation--wrapper container">
-                {location.map((location) => (
+                {locationInfo.map((location) => (
                     <Location 
                         name={location.name}
                         areaName={location.areaName}
