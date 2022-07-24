@@ -27,6 +27,7 @@
     color: $lightText;
     max-width: 30rem;
     transition: all .25s ease;
+    text-decoration: none;
 
     &:hover{
         transform: translateY(-7.5%);

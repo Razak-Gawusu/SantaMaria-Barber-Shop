@@ -5,6 +5,11 @@
             background-color: rgb(7, 7, 7);
             margin-top: -35rem;
             padding: 6rem;
+
+            a{
+                text-decoration: none;
+                color: $lightText;
+            }
         }
         .service--top{
             @include flexdiv(row, center, flex-start);

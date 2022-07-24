@@ -56,8 +56,8 @@ function Main() {
                             ) )}
                         </article>
                         <div className='hero__book'>
-                            <button className='btn btn--book'>book michael</button>
-                            <button className='btn btn--book'>book joseph</button>
+                            <button className='btn btn--book'><a href='mailto:videojuction@mail.com'>Book Video Junction</a></button>
+                            <button className='btn btn--book'><a href='mailto:videojuction@mail.com' >Book Santa Maria Last-Stop</a></button>
                         </div>
                     </div>
             </div>
@@ -94,7 +94,7 @@ function Main() {
                     We are hiring for our new Cumberland location! We are seeking full time experienced barbers to join our amazing team. The ideal candidate must be able to do all type of haircuts, including shaves with straight razor, fades, business cut, and must be friendly and sociable with our clients!                   
                     </p>
                     <p className='section__text--paragraph paragraph'>
-                    If you're interested, please email your resume to <a className='contact--link' href="info@looksnstyle.com">info@looksnstyle.com</a>                  
+                    If you're interested, please email your resume to <a className='contact--link' href="mailto:info@looksnstyle.com">info@looksnstyle.com</a>                  
                     </p>
 
                 </article>

@@ -116,10 +116,9 @@
 
     .timeLocation{
          &--wrapper{
-
             .timeLocation__item{
                 text-align: left !important;
-                @include flexdiv(row, space-between, flex-start);
+                @include flexdiv(row, space-between, center);
 
                 &--info{
                     width: 30%;

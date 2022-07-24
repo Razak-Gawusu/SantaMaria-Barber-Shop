@@ -26,7 +26,7 @@ img {
 
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: auto;
 }
 
@@ -63,10 +63,11 @@ img {
   color: #ffffff;
   max-width: 30rem;
   transition: all 0.25s ease;
+  text-decoration: none;
 }
 .btn--book:hover {
   transform: translateY(-7.5%);
-  background-color: #9e7f3c;
+  background-color: #c5a152;
 }
 
 @media screen and (max-width: 599px) {
@@ -168,7 +169,7 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 0;
   }
   .timeLocation--wrapper .timeLocation__item--info {
@@ -330,6 +331,10 @@ img {
   margin-top: -35rem;
   padding: 6rem;
 }
+.services--wrapper .service__item a {
+  text-decoration: none;
+  color: #ffffff;
+}
 .services--wrapper .service--top {
   display: flex;
   flex-direction: row;
@@ -365,7 +370,7 @@ img {
 .timeLocation--wrapper .timeLocation__item {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
-  margin: 4rem 0;
+  padding: 8rem 0;
 }
 .timeLocation--wrapper .timeLocation__item--info {
   margin-bottom: 4rem;
@@ -380,10 +385,14 @@ img {
 .timeLocation--wrapper .timeLocation__item--info .btn--location {
   background-color: #c99c59;
   font-size: 2rem;
-  padding: 1em 1.5em;
-  width: 70%;
+  padding: 1em 0.5em;
+  width: 100%;
   color: #ffffff;
   margin: 4rem 0;
+}
+.timeLocation--wrapper .timeLocation__item--info a {
+  text-decoration: none;
+  color: #ffffff;
 }
 .timeLocation--wrapper .timeLocation__item .location__info {
   display: flex;
@@ -426,7 +435,7 @@ img {
 .home {
   min-height: 100vh;
   background-color: #353535;
-  background-image: url("../../public/images/hero_img.jpeg");
+  background-image: url("../../public/images/hero_img.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -478,7 +487,7 @@ img {
 .hero {
   width: 100%;
   text-align: center;
-  transform: translateY(50%);
+  transform: translateY(65%);
 }
 .hero .hero--title {
   font-size: clamp(6rem, 7vw, 13rem);
@@ -497,5 +506,5 @@ img {
 }
 
 #map {
-  height: 35rem;
+  height: 50rem;
 }/*# sourceMappingURL=main.css.map */

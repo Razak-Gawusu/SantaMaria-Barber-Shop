@@ -1,25 +1,25 @@
 export const locationInfo = [
     {
-        streetName:'1240 Bay Street',
+        streetName:'Video Street',
         areaName: 'video Junction, Santa-Maria',
         timeWeekDays:'9 - 7',
         timeWeekEnds:'10 - 5',
-        closeTo: 'Cuberland Subway Station',
-        closeToBuilding: 'Located inside the building',
+        closeTo: 'Opposite Duke Filling Station',
+        closeToBuilding: '2nd building from your right',
         name:'Video-Junction',
-        description: 'Just a few doors down from Rosedale Subway Station',
+        description: 'Just a few steps from Video Street',
         locationlng: '7.9527706',
         locationlat: '-1.0307118'
     },
     {
-        streetName:'1240 Bay Street',
+        streetName:'Acey Armah Street',
         timeWeekDays:'9 - 7',
         timeWeekEnds:'10 - 5',
-        areaName: 'video Junction, Santa-Maria',
-        closeTo: 'Cuberland Subway Station',
+        areaName: 'Last-stop, Santa-Maria',
+        closeTo: 'Opposite Dunwell Methodist Church',
         closeToBuilding: 'Located inside the building',
-        name:'Video-Junction',
-        description: 'Just a few doors down from Rosedale Subway Station',
+        name:'Santa Maria last-stop',
+        description: 'Just a few steps from Santa Maria last-stop station',
         locationlng: '7.9527706',
         locationlat: '-1.0307118'
     }

@@ -30,15 +30,15 @@ function Location(props) {
                     <h5><span>Saturday - Sunday: </span>{props.timeWeekEnds}</h5>
                 </div>
             </div>
-            <button className='btn btn--location'>{props.name}</button>
+            <button className='btn btn--location btn--book'><a href='mailto:videojuction@mail.com'>{props.name}</a></button>
         </div>
         <div className='timeLocation__item--map' id='map'>
-            <MapContainer id='map' center={[51.505, -0.09]} zoom={15 } scrollWheelZoom={true}>
+            <MapContainer id='map' center={[5.601633311671779, -0.27387797670514136]} zoom={15 } scrollWheelZoom={true}>
                 <TileLayer
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={[51.505, -0.09]}></Marker>
+                <Marker position={[5.601633311671779, -0.27387797670514136]}></Marker>
             </MapContainer>
         </div>
     </article>
